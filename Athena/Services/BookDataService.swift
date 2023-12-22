@@ -44,7 +44,5 @@ class BookDataService {
                 self?.books = returnedBooks.books
                 self?.bookSubscription?.cancel()
             }
-        
-        
     }
 }

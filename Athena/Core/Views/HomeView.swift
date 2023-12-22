@@ -11,33 +11,23 @@ struct HomeView: View {
     
     var body: some View {
         ZStack {
-            Color.theme.background
-                .ignoresSafeArea()
-            VStack {
-                Text("Header")
-                    .padding(.top)
-                    .font(.headline)
-                    .foregroundColor(.theme.raisinBlack)
                 TabView {
                     VStack {
-                        Color.theme.background
+                        BookCreatorView()
                     }
                     .tabItem{
                         Label("Mis Prestamos", systemImage: "list.bullet")
                     }
                     
                     VStack{
-                        BookCollectionView()
+                        // BookCollectionView()
+                        Color.theme.raisinBlack
                     }
                     .tabItem{
                         Label("Libros", systemImage: "books.vertical")
                     }
                 }
-                
-            }
-        }
-        
-
+        }.navigationTitle("Test")
     }
 }
 
@@ -45,6 +35,6 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
             HomeView()
-        }
+        }.navigationTitle("Test")
     }
 }
