@@ -20,6 +20,10 @@
 		7343406E2B2F79A600AE27D1 /* BooksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7343406D2B2F79A600AE27D1 /* BooksViewModel.swift */; };
 		734340702B2F898B00AE27D1 /* PreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7343406F2B2F898B00AE27D1 /* PreviewProvider.swift */; };
 		734340732B2F947200AE27D1 /* BookDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734340722B2F947200AE27D1 /* BookDataService.swift */; };
+		739057BC2B89681C0087FBD6 /* AsyncBookDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739057BB2B89681C0087FBD6 /* AsyncBookDataService.swift */; };
+		739057BE2B89A32A0087FBD6 /* BookDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739057BD2B89A32A0087FBD6 /* BookDetailView.swift */; };
+		739057C02B89B1FB0087FBD6 /* GoogleBookResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739057BF2B89B1FB0087FBD6 /* GoogleBookResponse.swift */; };
+		73FEDAB32B3437EC00376837 /* BookCreatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FEDAB22B3437EC00376837 /* BookCreatorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +42,10 @@
 		7343406F2B2F898B00AE27D1 /* PreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProvider.swift; sourceTree = "<group>"; };
 		734340722B2F947200AE27D1 /* BookDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDataService.swift; sourceTree = "<group>"; };
 		734340742B2FA4BE00AE27D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		739057BB2B89681C0087FBD6 /* AsyncBookDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncBookDataService.swift; sourceTree = "<group>"; };
+		739057BD2B89A32A0087FBD6 /* BookDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailView.swift; sourceTree = "<group>"; };
+		739057BF2B89B1FB0087FBD6 /* GoogleBookResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleBookResponse.swift; sourceTree = "<group>"; };
+		73FEDAB22B3437EC00376837 /* BookCreatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCreatorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +109,7 @@
 		7343405A2B2F421F00AE27D1 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				73FEDAB12B3436CC00376837 /* Extensions */,
 				7343406C2B2F798D00AE27D1 /* Model */,
 				7343405D2B2F425800AE27D1 /* ViewsModel */,
 				7343405C2B2F424100AE27D1 /* Views */,
@@ -112,10 +121,11 @@
 			isa = PBXGroup;
 			children = (
 				734340492B2F27BC00AE27D1 /* HomeView.swift */,
-				7343406F2B2F898B00AE27D1 /* PreviewProvider.swift */,
 				734340582B2F41F200AE27D1 /* BookView.swift */,
 				734340602B2F47F400AE27D1 /* RowView.swift */,
 				7343406A2B2F58B900AE27D1 /* BookCollectionView.swift */,
+				73FEDAB22B3437EC00376837 /* BookCreatorView.swift */,
+				739057BD2B89A32A0087FBD6 /* BookDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -164,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				7343405E2B2F455300AE27D1 /* BookModel.swift */,
+				739057BF2B89B1FB0087FBD6 /* GoogleBookResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -172,8 +183,17 @@
 			isa = PBXGroup;
 			children = (
 				734340722B2F947200AE27D1 /* BookDataService.swift */,
+				739057BB2B89681C0087FBD6 /* AsyncBookDataService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		73FEDAB12B3436CC00376837 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7343406F2B2F898B00AE27D1 /* PreviewProvider.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,14 +269,18 @@
 				7343405F2B2F455300AE27D1 /* BookModel.swift in Sources */,
 				734340612B2F47F400AE27D1 /* RowView.swift in Sources */,
 				7343404A2B2F27BC00AE27D1 /* HomeView.swift in Sources */,
+				739057C02B89B1FB0087FBD6 /* GoogleBookResponse.swift in Sources */,
 				734340482B2F27BC00AE27D1 /* AthenaApp.swift in Sources */,
 				734340562B2F36E000AE27D1 /* Color.swift in Sources */,
 				7343406E2B2F79A600AE27D1 /* BooksViewModel.swift in Sources */,
+				739057BE2B89A32A0087FBD6 /* BookDetailView.swift in Sources */,
 				734340732B2F947200AE27D1 /* BookDataService.swift in Sources */,
 				7343406B2B2F58B900AE27D1 /* BookCollectionView.swift in Sources */,
 				734340592B2F41F200AE27D1 /* BookView.swift in Sources */,
 				734340692B2F576A00AE27D1 /* MockBooks.swift in Sources */,
+				73FEDAB32B3437EC00376837 /* BookCreatorView.swift in Sources */,
 				734340702B2F898B00AE27D1 /* PreviewProvider.swift in Sources */,
+				739057BC2B89681C0087FBD6 /* AsyncBookDataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,7 +413,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Athena/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Athena;
+				INFOPLIST_KEY_CFBundleDisplayName = Atenea;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -424,7 +448,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Athena/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Athena;
+				INFOPLIST_KEY_CFBundleDisplayName = Atenea;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -519,7 +543,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Athena/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Athena;
+				INFOPLIST_KEY_CFBundleDisplayName = Atenea;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

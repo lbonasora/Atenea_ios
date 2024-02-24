@@ -15,7 +15,7 @@ struct BookModel: Identifiable, Codable {
     let publicationYear: Int?
     let genre: String?
     let publisher: String?
-    let url: String?
+    var url: String?
 }
 
 struct BooksResponse: Codable {

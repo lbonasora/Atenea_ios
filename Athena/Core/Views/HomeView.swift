@@ -8,36 +8,26 @@
 import SwiftUI
 
 struct HomeView: View {
+    @StateObject private var booksViewModel = BooksViewModel()
     
     var body: some View {
-        ZStack {
-            Color.theme.background
-                .ignoresSafeArea()
-            VStack {
-                Text("Header")
-                    .padding(.top)
-                    .font(.headline)
-                    .foregroundColor(.theme.raisinBlack)
-                TabView {
-                    VStack {
-                        Color.theme.background
+        NavigationStack {
+            
+            TabView {
+                BookCreatorView()
+                    .tabItem {
+                        Label("Crear Libro", systemImage: "plus.circle")
                     }
-                    .tabItem{
-                        Label("Mis Prestamos", systemImage: "list.bullet")
-                    }
-                    
-                    VStack{
-                        BookCollectionView()
-                    }
+                
+                BookCollectionView()
                     .tabItem{
                         Label("Libros", systemImage: "books.vertical")
                     }
-                }
-                
+                    .environmentObject(booksViewModel)
             }
+            .navigationBarTitle("Athena", displayMode: .inline)
         }
         
-
     }
 }
 
