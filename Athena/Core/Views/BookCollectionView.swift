@@ -12,24 +12,56 @@ struct BookCollectionView: View {
     let horizontalSpacing: CGFloat = 16
     let height: CGFloat = 350
     
-    @EnvironmentObject private var vm: BooksViewModel
-        
+    @EnvironmentObject var vm: BooksViewModel
+      
+    
     var body: some View {
-        GeometryReader { geometry in
-            ScrollView {
-                VStack(alignment: .leading, spacing: 8) {
-                    ForEach(0..<vm.allBooks.count) { i in
-                        if i % Int(itemPerRow) == 0 {
-                            buildView(rowIndex: i, geometry: geometry)
+            NavigationStack {
+                    ScrollView {
+                        LazyVGrid(columns: [GridItem(.flexible(), spacing: horizontalSpacing),
+                                  GridItem(.flexible(), spacing: horizontalSpacing)], spacing: horizontalSpacing) {
+                            ForEach(vm.allBooks) { book in
+                                NavigationLink(destination: BookDetailView(book: book)) {
+                                    BookView(title: book.title ?? "")
+                                        .frame(height: height)
+                                }
+                            }
                         }
                     }
-                }
+                    .refreshable {
+                        await vm.fetchData()
+                    }
+                    .task {
+                        await vm.fetchData()
+                    }
+                    .padding(15)
             }
-            
         }
-    }
     
-    func buildView(rowIndex: Int, geometry: GeometryProxy) -> RowView? {
+    /*
+    var body: some View {
+
+        NavigationStack {
+                    ScrollView {
+                        VStack(alignment: .leading, spacing: 8) {
+                            ForEach(0..<vm.allBooks.count) { i in
+                                if i % Int(itemPerRow) == 0 {
+                                    buildView(rowIndex: i)
+                                }
+                            }
+                        }
+                    }
+                    .refreshable {
+                        await vm.fetchData()
+                    }
+                    .task {
+                        await vm.fetchData()
+                    }
+        }
+    }*/
+        
+        
+    func buildView(rowIndex: Int) -> RowView? {
         var rowBooks = [BookModel]()
         
         for itemIndex in 0..<Int(itemPerRow) {
@@ -39,7 +71,7 @@ struct BookCollectionView: View {
         }
         
         if !rowBooks.isEmpty {
-            return RowView(books: rowBooks, width: getWidth(geometry: geometry), height: height, horizontalSpacing: horizontalSpacing)
+            return RowView(books: rowBooks, width: 160.0, height: height, horizontalSpacing: horizontalSpacing)
         }
         
         return nil
@@ -56,7 +88,7 @@ struct BookCollectionView: View {
 struct BookCollectionView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-           BookCollectionView()
+            BookCollectionView()
         }
         .environmentObject(dev.homeVM)
     }

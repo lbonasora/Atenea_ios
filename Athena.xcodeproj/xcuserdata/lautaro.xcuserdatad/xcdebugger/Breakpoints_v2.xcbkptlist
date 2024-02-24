@@ -7,32 +7,112 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "3947F0FB-AA09-4DDA-939F-0CE72A25809C"
-            shouldBeEnabled = "Yes"
+            uuid = "F0075774-252E-4A79-87B9-1B87938BF206"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Athena/Core/ViewsModel/BooksViewModel.swift"
+            filePath = "Athena/Services/BookDataService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
-            landmarkName = "addSubscribers()"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "getBooks()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F0075774-252E-4A79-87B9-1B87938BF206 - 2d9efbfb5d7a5191"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Athena.BookDataService.getBooks() -&gt; ()"
+                  moduleName = "Athena"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lautaro/Library/Mobile%20Documents/com~apple~CloudDocs/UNI/2023/cuatrimestre_2/lenguajes_programacion/Proyecto%20Final/Atenea/Athena/Services/BookDataService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "533">
+               </Location>
+               <Location
+                  uuid = "F0075774-252E-4A79-87B9-1B87938BF206 - 2d9efbfb5d7a5191"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Athena.BookDataService.getBooks() -&gt; ()"
+                  moduleName = "Athena"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lautaro/Library/Mobile%20Documents/com~apple~CloudDocs/UNI/2023/cuatrimestre_2/lenguajes_programacion/Proyecto%20Final/Atenea/Athena/Services/BookDataService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "1697">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "F0075774-252E-4A79-87B9-1B87938BF206"
+            uuid = "E4F034F8-EAF7-494D-AE28-061E1FA3527C"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Athena/Services/BookDataService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
-            landmarkName = "getBooks()"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
+            landmarkName = "createPOSTRequest(with:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E1586C7F-8266-47A4-A5F7-44AF36E9F9FD"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Athena/Core/Views/BookCollectionView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "BookCollectionView"
+            landmarkType = "14">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "632AB4F9-A88C-48AE-A811-90B2C3F4ADE6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Athena/Core/Views/BookCollectionView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "BookCollectionView"
+            landmarkType = "14">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "24B446A0-F064-4DE9-8B7F-A17B99AA4ACB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Athena/Services/AsyncBookDataService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "completeWithGoogleData(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
